@@ -1,0 +1,5797 @@
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: #f8f6f2;
+}
+
+
+/* ==============================
+   COVER
+============================== */
+
+.cover {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('../images/5.jpg');
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+
+    border-top: 3px solid #a94b65;
+
+    color: white;
+}
+
+
+/* LAPISAN GELAP */
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1;
+}
+
+
+/* ==============================
+   JUDUL COVER
+============================== */
+
+.cover-heading {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    width: 100%;
+
+    padding: 68px 15px 0;
+}
+
+.wedding-text {
+    font-size: 23px;
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.cover-heading h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(42px, 8vw, 60px);
+    font-weight: 400;
+
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.cover-heading h1 span {
+    font-weight: 300;
+}
+
+
+/* ==============================
+   BAGIAN BAWAH
+============================== */
+
+.cover-bottom {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 9%;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.guest-label {
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 28px;
+}
+
+.cover-bottom h3 {
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 45px;
+}
+
+
+/* ==============================
+   TOMBOL BUKA UNDANGAN
+============================== */
+
+.open-button {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    min-width: 210px;
+
+    border: 1px solid white;
+    border-radius: 50px;
+
+    background: rgba(156, 119, 101, 0.85);
+
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.open-button:hover {
+    background: white;
+    color: #876b5e;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   ISI UNDANGAN
+============================== */
+
+.main-invitation {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+.main-invitation.active {
+    display: block;
+}
+
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    .cover {
+        background-position: center center;
+    }
+
+    .cover-heading {
+        padding-top: 65px;
+    }
+
+    .wedding-text {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+
+    .cover-heading h1 {
+        font-size: 43px;
+    }
+
+    .cover-bottom {
+        bottom: 8%;
+        padding: 0 15px;
+    }
+
+    .guest-label {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+
+    .cover-bottom h3 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .open-button {
+        font-size: 19px;
+        min-width: 200px;
+        padding: 12px 25px;
+    }
+
+}
+
+
+
+/* ==========================================
+   HALAMAN UTAMA UNDANGAN
+========================================== */
+
+.main-invitation {
+    display: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-invitation.active {
+    display: block;
+}
+
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.home-wedding {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 247, 0.70),
+            rgba(255, 250, 247, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-top: 3px solid #a34d65;
+}
+
+
+/* ==========================================
+   CONTAINER KONTEN
+========================================== */
+
+.home-content {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   THE WEDDING OF
+========================================== */
+
+.wedding-subtitle {
+    position: absolute;
+
+    top: 19.7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    color: #514638;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   FOTO PASANGAN
+========================================== */
+
+.couple-photo {
+    position: absolute;
+
+    top: 25.5%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+    height: 392px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border: 4px solid #fff;
+
+    border-radius: 150px 150px 140px 140px;
+
+    background: #eee;
+
+    box-shadow:
+        0 3px 13px rgba(0, 0, 0, 0.20),
+        inset 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.couple-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* ==========================================
+   NAMA PASANGAN
+========================================== */
+
+.couple-name {
+    position: absolute;
+
+    top: 73.2%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 65px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #806d4d;
+
+    white-space: nowrap;
+}
+
+/* =================================
+   POSISI NAMA PASANGAN
+================================= */
+
+.couple-name {
+    display: block;
+    width: 100%;
+    text-align: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    position: relative;
+    left: auto;
+    right: auto;
+
+    transform: none;
+}
+
+
+/* ==========================================
+   TANGGAL PERNIKAHAN
+========================================== */
+
+.wedding-date {
+    position: absolute;
+
+    top: 84%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    color: #634d38;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   TOMBOL MUSIK
+========================================== */
+
+.music-button {
+    position: fixed;
+
+    right: 15px;
+    bottom: 9%;
+
+    z-index: 100;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #827666;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: #766b5c;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.music-button:hover {
+    transform: scale(1.08);
+}
+
+.music-button.playing i {
+    animation: rotateMusic 4s linear infinite;
+}
+
+@keyframes rotateMusic {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .wedding-subtitle {
+        font-size: 19px;
+    }
+
+    .couple-photo {
+        width: min(260px, 62vw);
+        height: min(392px, 45vh);
+    }
+
+    .couple-name {
+        font-size: clamp(43px, 9.5vw, 60px);
+    }
+
+    .wedding-date {
+        font-size: clamp(16px, 3.2vw, 20px);
+    }
+
+    .music-button {
+        width: 50px;
+        height: 50px;
+
+        right: 14px;
+        bottom: 9%;
+
+        font-size: 23px;
+    }
+
+}
+
+
+/* ==========================================
+   HP LAYAR PENDEK
+========================================== */
+
+@media (max-height: 750px) {
+
+    .wedding-subtitle {
+        top: 17%;
+    }
+
+    .couple-photo {
+        top: 23%;
+        height: 42vh;
+    }
+
+    .couple-name {
+        top: 70%;
+    }
+
+    .wedding-date {
+        top: 83%;
+    }
+
+}
+
+
+
+
+.ayat-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 530px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    background-color: #bcaea6;
+
+    background-image:
+        linear-gradient(
+            rgba(188, 174, 166, 0.70),
+            rgba(188, 174, 166, 0.70)
+        ),
+        url('../images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+
+    padding: 90px 25px 55px;
+}
+
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.ayat-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   LOGO HA
+===================================== */
+
+.ayat-logo {
+    width: 145px;
+    height: 110px;
+
+    margin: 0 auto 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ayat-logo img {
+    display: block;
+
+    width: 130%;
+    height: 130%;
+
+    object-fit: contain;
+}
+
+
+/* =====================================
+   KUTIPAN AYAT
+===================================== */
+
+.ayat-text {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ayat-text p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    line-height: 1.39;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    margin: 0;
+}
+
+
+/* =====================================
+   REFERENSI AYAT
+===================================== */
+
+.ayat-reference {
+    margin-top: 30px;
+}
+
+.ayat-reference p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    margin: 0;
+}
+
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .ayat-section {
+        min-height: 530px;
+
+        padding: 85px 28px 45px;
+    }
+
+    .ayat-logo {
+        width: 130px;
+        height: 100px;
+
+        margin-bottom: 35px;
+    }
+
+    .ayat-text p {
+        font-size: 18px;
+        line-height: 1.45;
+    }
+
+    .ayat-reference {
+        margin-top: 28px;
+    }
+
+    .ayat-reference p {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =====================================
+   HP KECIL
+===================================== */
+
+@media (max-width: 380px) {
+
+    .ayat-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ayat-logo {
+        width: 115px;
+        height: 90px;
+    }
+
+    .ayat-text p {
+        font-size: 17px;
+    }
+
+}
+
+
+
+/* =========================================
+   PROFIL KEDUA MEMPELAI
+========================================= */
+
+.bride-groom-section {
+    position: relative;
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 247, 0.70),
+            rgba(255, 250, 247, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+
+    padding: 75px 20px 80px;
+
+    color: #65513e;
+}
+
+
+/* CONTAINER */
+
+.bride-groom-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PEMBUKA
+========================================= */
+
+.invitation-intro {
+    width: 100%;
+    margin: 0 auto 34px;
+}
+
+.invitation-intro h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #634b36;
+
+    margin-bottom: 30px;
+}
+
+.invitation-intro p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    color: #65513e;
+
+    max-width: 620px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   PROFIL MEMPELAI
+========================================= */
+
+.person-profile {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* FOTO OVAL */
+
+.person-photo {
+    position: relative;
+
+    width: 260px;
+    height: 392px;
+
+    overflow: hidden;
+
+    border: 4px solid #ffffff;
+
+    border-radius: 150px 150px 140px 140px;
+
+    background: #d4d4d4;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.20),
+        inset 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+.person-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+/* =========================================
+   NAMA MEMPELAI
+========================================= */
+
+.person-name {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 43px;
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    color: #92794e;
+
+    margin-top: 23px;
+    margin-bottom: 24px;
+}
+
+
+/* KETERANGAN ORANG TUA */
+
+.person-parents {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    color: #634d38;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   SIMBOL & 
+========================================= */
+
+.couple-separator {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    height: 110px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+    font-weight: 400;
+
+    color: #a18b67;
+}
+
+
+/* =========================================
+   MEMPELAI WANITA
+========================================= */
+
+.bride-profile {
+    padding-bottom: 0;
+}
+
+
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+.instagram-button {
+    width: 45px;
+    height: 45px;
+
+    margin-top: 32px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #a18e70;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 23px;
+
+    transition: 0.3s ease;
+}
+
+.instagram-button:hover {
+    background: #806d4d;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .bride-groom-section {
+        padding: 75px 25px 75px;
+    }
+
+    .invitation-intro p {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .bride-groom-section {
+        padding: 75px 20px 65px;
+
+        background-position: center top;
+    }
+
+    .invitation-intro {
+        margin-bottom: 34px;
+    }
+
+    .invitation-intro h3 {
+        font-size: 23px;
+
+        margin-bottom: 30px;
+    }
+
+    .invitation-intro p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .person-photo {
+        width: 260px;
+        height: 392px;
+    }
+
+    .person-name {
+        font-size: 42px;
+
+        margin-top: 22px;
+        margin-bottom: 23px;
+    }
+
+    .person-parents {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+
+    .couple-separator {
+        height: 110px;
+        font-size: 43px;
+    }
+
+    .instagram-button {
+        width: 45px;
+        height: 45px;
+        margin-top: 32px;
+    }
+
+}
+
+
+/* HP KECIL */
+
+@media (max-width: 380px) {
+
+    .bride-groom-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .person-photo {
+        width: 230px;
+        height: 355px;
+    }
+
+    .person-name {
+        font-size: 37px;
+    }
+
+    .invitation-intro p {
+        font-size: 18px;
+    }
+
+    .person-parents {
+        font-size: 18px;
+    }
+
+}
+
+
+
+/* ==========================================
+   COUNTDOWN PERNIKAHAN
+========================================== */
+
+.countdown-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(188, 174, 166, 0.70),
+            rgba(188, 174, 166, 0.70)
+        ),
+        url('../images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 90px 20px;
+}
+
+
+/* ==========================================
+   CONTAINER KARTU
+========================================== */
+
+.countdown-container {
+    width: 100%;
+    max-width: 585px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   KARTU COUNTDOWN
+========================================== */
+
+.countdown-card {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 43px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==========================================
+   FOTO PASANGAN
+========================================== */
+
+.countdown-photo {
+    position: relative;
+
+    width: 100%;
+    height: 455px;
+
+    overflow: hidden;
+
+    background: #d1c5bd;
+}
+
+.countdown-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* ==========================================
+   EFEK PUTIH FOTO BAGIAN BAWAH
+========================================== */
+
+.photo-fade {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 170px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.55) 48%,
+        #ffffff 100%
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   BAGIAN ANGKA COUNTDOWN
+========================================== */
+
+.countdown-timer {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 125px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+
+    background: #ffffff;
+
+    padding: 10px 15px 18px;
+}
+
+
+/* ITEM WAKTU */
+
+.time-item {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ANGKA */
+
+.time-item h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #987d5b;
+
+    margin: 0 0 5px;
+}
+
+
+/* LABEL */
+
+.time-item span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    color: #a58e72;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .countdown-section {
+        padding: 90px 25px;
+    }
+
+    .countdown-photo {
+        height: 430px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .countdown-section {
+        min-height: 100vh;
+        min-height: 100svh;
+
+        padding: 90px 20px 70px;
+    }
+
+    .countdown-container {
+        max-width: 585px;
+    }
+
+    .countdown-card {
+        border-radius: 35px;
+    }
+
+    .countdown-photo {
+        height: 440px;
+    }
+
+    .photo-fade {
+        height: 155px;
+    }
+
+    .countdown-timer {
+        min-height: 125px;
+
+        padding: 10px 8px 17px;
+    }
+
+    .time-item h2 {
+        font-size: 42px;
+    }
+
+    .time-item span {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ==========================================
+   HP KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .countdown-section {
+        padding: 75px 15px;
+    }
+
+    .countdown-photo {
+        height: 360px;
+    }
+
+    .countdown-timer {
+        min-height: 110px;
+    }
+
+    .time-item h2 {
+        font-size: 35px;
+    }
+
+    .time-item span {
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* ==========================================
+   SECTION DETAIL ACARA
+========================================== */
+
+.event-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 60px 20px 75px;
+
+    background:
+        linear-gradient(
+            rgba(250, 245, 242, 0.70),
+            rgba(250, 245, 242, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #594735;
+}
+
+
+/* ==========================================
+   KALIMAT PEMBUKA
+========================================== */
+
+.event-intro {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto 32px;
+
+    text-align: center;
+}
+
+.event-intro p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    color: #65513e;
+}
+
+
+/* ==========================================
+   BINGKAI BESAR BERBENTUK ARCH
+========================================== */
+
+.event-arch {
+    position: relative;
+
+    width: 100%;
+    max-width: 585px;
+
+    min-height: 1035px;
+
+    margin: 0 auto;
+
+    padding: 125px 30px 120px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.48),
+            rgba(255, 255, 255, 0.58)
+        ),
+        url('../images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    border: 4px solid #ffffff;
+
+    border-radius:
+        300px 300px 290px 290px /
+        180px 180px 180px 180px;
+
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.20),
+        inset 0 0 15px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* ==========================================
+   DETAIL MASING-MASING ACARA
+========================================== */
+
+.event-detail {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* JUDUL ACARA */
+
+.event-detail h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    color: #927c56;
+
+    margin: 0;
+}
+
+
+/* GARIS PEMBATAS */
+
+.event-line {
+    width: 75%;
+    max-width: 295px;
+
+    height: 1px;
+
+    background: #a18b6b;
+
+    margin: 26px auto 32px;
+}
+
+
+/* TANGGAL */
+
+.event-detail h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    color: #342c26;
+
+    margin: 0;
+}
+
+
+/* JAM ACARA */
+
+.event-time {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    color: #45382d;
+
+    margin: 35px 0 32px;
+}
+
+
+/* ALAMAT */
+
+.event-location {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    color: #46372b;
+
+    margin: 0 0 43px;
+}
+
+.event-location strong {
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   TOMBOL LOKASI
+========================================== */
+
+.location-button {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 203px;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    background: #a58b7d;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.location-button i {
+    font-size: 19px;
+}
+
+.location-button:hover {
+    background: #80695d;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   JARAK AKAD DAN RESEPSI
+========================================== */
+
+.akad-detail {
+    padding-bottom: 0;
+}
+
+.reception-detail {
+    margin-top: 105px;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .event-section {
+        padding: 55px 25px 65px;
+    }
+
+    .event-arch {
+        max-width: 585px;
+        min-height: 1035px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .event-section {
+        padding: 60px 15px 65px;
+    }
+
+    .event-intro {
+        max-width: 500px;
+
+        margin-bottom: 32px;
+
+        padding: 0 15px;
+    }
+
+    .event-intro p {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .event-arch {
+        width: 100%;
+
+        min-height: 1035px;
+
+        padding: 125px 20px 110px;
+
+        border-width: 4px;
+
+        border-radius:
+            290px 290px 285px 285px /
+            180px 180px 180px 180px;
+    }
+
+    .event-detail h2 {
+        font-size: 54px;
+    }
+
+    .event-line {
+        width: 75%;
+        margin: 25px auto 32px;
+    }
+
+    .event-detail h3 {
+        font-size: 23px;
+    }
+
+    .event-time {
+        font-size: 18px;
+        margin: 35px 0 32px;
+    }
+
+    .event-location {
+        font-size: 18px;
+        line-height: 1.5;
+
+        margin-bottom: 43px;
+    }
+
+    .location-button {
+        min-width: 203px;
+
+        padding: 12px 24px;
+
+        font-size: 19px;
+    }
+
+    .reception-detail {
+        margin-top: 105px;
+    }
+
+}
+
+
+/* ==========================================
+   HP LEBAR KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .event-arch {
+        min-height: 1000px;
+
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .event-detail h2 {
+        font-size: 47px;
+    }
+
+    .event-detail h3 {
+        font-size: 21px;
+    }
+
+    .event-time,
+    .event-location {
+        font-size: 17px;
+    }
+
+    .reception-detail {
+        margin-top: 95px;
+    }
+
+}
+
+
+
+/* ==========================================
+   LOVE STORY HABIB & ADIBA
+========================================== */
+
+.love-story-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 90px 20px 100px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(250, 246, 243, 0.70),
+            rgba(250, 246, 243, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+
+    color: #65513e;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.love-story-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.love-story-heading {
+    text-align: center;
+
+    max-width: 550px;
+
+    margin: 0 auto 75px;
+}
+
+.story-subtitle {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: #a18b6b;
+
+    margin-bottom: 12px;
+}
+
+.love-story-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    line-height: 1.1;
+
+    margin: 0;
+}
+
+.story-heading-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: #a18b6b;
+
+    margin: 22px auto;
+}
+
+.love-story-heading p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    color: #65513e;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.love-timeline {
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 10px;
+}
+
+
+/* GARIS TIMELINE */
+
+.love-timeline::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background: #b6a185;
+
+    transform: translateX(-50%);
+}
+
+
+/* ==========================================
+   ITEM CERITA
+========================================== */
+
+.story-item {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 65px;
+}
+
+.story-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* TITIK TIMELINE */
+
+.story-marker {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 25px;
+    left: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(-50%);
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #a18b6b;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   KARTU CERITA
+========================================== */
+
+.story-card {
+    width: 100%;
+    max-width: 480px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(161, 139, 107, 0.28);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 7px 25px rgba(95, 75, 55, 0.09);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(95, 75, 55, 0.14);
+}
+
+
+/* ==========================================
+   FOTO CERITA
+========================================== */
+
+.story-image {
+    width: 100%;
+
+    height: 270px;
+
+    overflow: hidden;
+
+    background: #e8dfd8;
+}
+
+.story-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+.story-card:hover .story-image img {
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   KONTEN CERITA
+========================================== */
+
+.story-content {
+    padding: 28px 30px 32px;
+
+    text-align: center;
+}
+
+.story-date {
+    display: inline-block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #a18b6b;
+
+    margin-bottom: 10px;
+}
+
+.story-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    margin: 0 0 14px;
+}
+
+.story-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color: #65513e;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   PENUTUP LOVE STORY
+========================================== */
+
+.story-closing {
+    text-align: center;
+
+    margin-top: 75px;
+
+    padding: 0 15px;
+}
+
+.closing-heart {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #a18b6b;
+
+    color: white;
+
+    font-size: 21px;
+}
+
+.story-closing p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 24px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #76634c;
+
+    margin: 0 0 12px;
+}
+
+.story-closing span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    color: #927c56;
+}
+
+
+/* ==========================================
+   ANIMASI
+========================================== */
+
+@keyframes storyFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-item {
+    animation: storyFadeUp 0.8s ease both;
+}
+
+.story-item:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.story-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .love-story-section {
+        padding: 75px 20px 85px;
+    }
+
+    .love-story-heading h2 {
+        font-size: 49px;
+    }
+
+    .story-image {
+        height: 250px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .love-story-section {
+        padding: 75px 18px 85px;
+    }
+
+    .love-story-heading {
+        margin-bottom: 60px;
+    }
+
+    .love-story-heading h2 {
+        font-size: 48px;
+    }
+
+    .love-story-heading p {
+        font-size: 19px;
+    }
+
+    .love-timeline {
+        padding: 0 5px;
+    }
+
+    .love-timeline::before {
+        left: 50%;
+    }
+
+    .story-item {
+        margin-bottom: 55px;
+    }
+
+    .story-marker {
+        width: 38px;
+        height: 38px;
+
+        top: 20px;
+
+        font-size: 13px;
+    }
+
+    .story-card {
+        max-width: 100%;
+
+        border-radius: 22px;
+    }
+
+    .story-image {
+        height: 235px;
+    }
+
+    .story-content {
+        padding: 25px 20px 28px;
+    }
+
+    .story-content h3 {
+        font-size: 32px;
+    }
+
+    .story-content p {
+        font-size: 18px;
+    }
+
+    .story-date {
+        font-size: 13px;
+    }
+
+    .story-closing {
+        margin-top: 65px;
+    }
+
+    .story-closing p {
+        font-size: 22px;
+    }
+
+}
+
+
+/* ==========================================
+   HP KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .story-image {
+        height: 205px;
+    }
+
+    .story-content {
+        padding: 22px 17px;
+    }
+
+    .story-content h3 {
+        font-size: 29px;
+    }
+
+    .story-content p {
+        font-size: 17px;
+    }
+
+}
+
+
+
+/* ==========================================
+   GALERI HABIB & ADIBA
+========================================== */
+
+.gallery-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 85px 20px 95px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(250, 246, 243, 0.70),
+            rgba(250, 246, 243, 0.70)
+        ),
+        url('../images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: #65513e;
+}
+
+
+/* CONTAINER */
+
+.gallery-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   JUDUL GALERI
+========================================== */
+
+.gallery-heading {
+    text-align: center;
+
+    max-width: 550px;
+
+    margin: 0 auto 45px;
+}
+
+.gallery-heading > span {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #a18b6b;
+
+    margin-bottom: 12px;
+}
+
+.gallery-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    margin: 0;
+}
+
+.gallery-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: #a18b6b;
+
+    margin: 20px auto;
+}
+
+.gallery-heading p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    color: #65513e;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   GRID GALERI
+========================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+/* ITEM GALERI */
+
+.gallery-item {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    height: 260px;
+
+    padding: 4px;
+
+    overflow: hidden;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 18px rgba(91, 70, 52, 0.10);
+
+    cursor: pointer;
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 70, 52, 0.17);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================
+   OVERLAY FOTO
+========================================== */
+
+.gallery-overlay {
+    position: absolute;
+
+    inset: 4px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(75, 59, 44, 0.0);
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    opacity: 0;
+
+    transition: 0.35s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+
+    background: rgba(75, 59, 44, 0.30);
+}
+
+
+/* ==========================================
+   VIDEO GALERI
+========================================== */
+
+.gallery-video {
+    position: relative;
+}
+
+.video-play-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(-50%, -50%);
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: rgba(151, 124, 95, 0.85);
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    padding-left: 4px;
+
+    transition: 0.3s ease;
+}
+
+.gallery-video:hover .video-play-icon {
+    background: #a18b6b;
+
+    transform: translate(-50%, -50%) scale(1.12);
+}
+
+.video-label {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    padding: 5px 13px;
+
+    border-radius: 30px;
+
+    background: rgba(130, 105, 83, 0.88);
+
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   FOOTER GALERI
+========================================== */
+
+.gallery-footer {
+    text-align: center;
+
+    margin-top: 55px;
+}
+
+.gallery-footer i {
+    color: #a18b6b;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.gallery-footer p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #76634c;
+
+    margin: 0 0 10px;
+}
+
+.gallery-footer span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    color: #927c56;
+}
+
+
+/* ==========================================
+   LIGHTBOX FULLSCREEN
+========================================== */
+
+.gallery-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 65px 70px;
+
+    background: rgba(30, 25, 21, 0.96);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+}
+
+.gallery-lightbox.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* KONTEN LIGHTBOX */
+
+.lightbox-content {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 1100px;
+    max-height: 85vh;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border: 3px solid #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-content video {
+    width: 100%;
+
+    background: #000000;
+}
+
+
+/* ==========================================
+   TOMBOL TUTUP
+========================================== */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    background: #a18b6b;
+
+    transform: rotate(90deg);
+}
+
+
+/* ==========================================
+   NAVIGASI LIGHTBOX
+========================================== */
+
+.lightbox-nav {
+    position: absolute;
+
+    top: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lightbox-nav:hover {
+    background: #a18b6b;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+
+/* ==========================================
+   NOMOR FOTO
+========================================== */
+
+.lightbox-counter {
+    position: absolute;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #ffffff;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+        padding: 75px 20px 85px;
+    }
+
+    .gallery-grid {
+        gap: 13px;
+    }
+
+    .gallery-item {
+        height: 230px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 70px 16px 80px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 35px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 48px;
+    }
+
+    .gallery-heading p {
+        font-size: 19px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 11px;
+    }
+
+    .gallery-item {
+        height: 190px;
+
+        border-radius: 17px;
+
+        padding: 3px;
+    }
+
+    .gallery-item img {
+        border-radius: 12px;
+    }
+
+    .gallery-overlay {
+        inset: 3px;
+
+        border-radius: 12px;
+    }
+
+    .video-play-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 17px;
+    }
+
+    .video-label {
+        left: 9px;
+        bottom: 9px;
+
+        font-size: 11px;
+    }
+
+    .gallery-footer {
+        margin-top: 42px;
+    }
+
+    .gallery-footer p {
+        font-size: 19px;
+    }
+
+    /* LIGHTBOX HP */
+
+    .gallery-lightbox {
+        padding: 60px 15px;
+    }
+
+    .lightbox-content {
+        max-height: 75vh;
+    }
+
+    .lightbox-content img,
+    .lightbox-content video {
+        max-width: 100%;
+
+        max-height: 75vh;
+
+        border-radius: 9px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .lightbox-nav {
+        width: 39px;
+        height: 39px;
+
+        font-size: 15px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+}
+
+
+/* HP SANGAT KECIL */
+
+@media (max-width: 360px) {
+
+    .gallery-grid {
+        gap: 8px;
+    }
+
+    .gallery-item {
+        height: 165px;
+    }
+
+}
+
+
+
+/* ==========================================
+   WEDDING GIFT HABIB & ADIBA
+========================================== */
+
+.gift-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 90px 20px 100px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(250, 246, 243, 0.70),
+            rgba(250, 246, 243, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: #65513e;
+}
+
+
+/* CONTAINER */
+
+.gift-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.gift-heading {
+    text-align: center;
+
+    max-width: 540px;
+
+    margin: 0 auto 50px;
+}
+
+.gift-heading > span {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #a18b6b;
+
+    margin-bottom: 12px;
+}
+
+.gift-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    margin: 0;
+}
+
+.gift-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: #a18b6b;
+
+    margin: 22px auto;
+}
+
+.gift-heading p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #65513e;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   KUMPULAN KARTU
+========================================== */
+
+.gift-cards {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* ==========================================
+   KARTU REKENING
+========================================== */
+
+.gift-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 440px;
+
+    min-height: 255px;
+
+    padding: 25px 27px;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 255, 255, 0.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #b9a89c,
+            #958071
+        );
+
+    box-shadow:
+        0 10px 28px rgba(91, 70, 52, 0.18);
+
+    color: #ffffff;
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.gift-card::before {
+    content: '';
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    top: -100px;
+    right: -60px;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 50%;
+}
+
+.gift-card::after {
+    content: '';
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    bottom: -100px;
+    left: -45px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    border-radius: 50%;
+}
+
+.gift-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(91, 70, 52, 0.22);
+}
+
+
+/* ==========================================
+   IDENTITAS BANK
+========================================== */
+
+.gift-card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.bank-brand > span {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    color: #ffffff;
+}
+
+
+/* SIMBOL BANK */
+
+.bank-symbol {
+    width: 62px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,0.95);
+
+    font-family: Arial, sans-serif;
+
+    font-weight: 900;
+
+    font-size: 18px;
+
+    letter-spacing: -1px;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+
+/* WARNA LOGO */
+
+.bank-bca {
+    color: #1768a8;
+}
+
+.bank-bri {
+    color: #00529b;
+}
+
+.bank-mandiri {
+    color: #003b75;
+
+    background:
+        linear-gradient(135deg, #ffffff 60%, #f5c542 60%);
+}
+
+.bank-bni {
+    color: #ed6b24;
+}
+
+
+/* ICON CONTACTLESS */
+
+.bank-contactless {
+    font-size: 25px;
+
+    transform: rotate(90deg);
+
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+   CHIP KARTU
+========================================== */
+
+.gift-chip {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 28px;
+
+    font-size: 34px;
+
+    color: #f0e3c9;
+}
+
+
+/* ==========================================
+   NOMOR REKENING
+========================================== */
+
+.account-number {
+    position: relative;
+    z-index: 2;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+    margin-top: 12px;
+
+    text-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+
+/* ==========================================
+   BAGIAN BAWAH KARTU
+========================================== */
+
+.gift-card-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 12px;
+
+    margin-top: 23px;
+}
+
+.account-owner {
+    min-width: 0;
+}
+
+.account-owner span {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.85;
+
+    margin-bottom: 6px;
+}
+
+.account-owner h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   TOMBOL SALIN
+========================================== */
+
+.copy-account {
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 13px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.copy-account:hover {
+    background: #ffffff;
+
+    color: #927c56;
+}
+
+.copy-account.copied {
+    background: #ffffff;
+
+    color: #806c4f;
+}
+
+
+/* ==========================================
+   UCAPAN PENUTUP
+========================================== */
+
+.gift-thanks {
+    max-width: 530px;
+
+    margin: 65px auto 0;
+
+    text-align: center;
+}
+
+.gift-heart {
+    width: 53px;
+    height: 53px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #a18b6b;
+
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+.gift-thanks p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #65513e;
+
+    margin: 0 0 15px;
+}
+
+.gift-thanks h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .gift-section {
+        padding: 75px 20px 85px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .gift-section {
+        padding: 70px 16px 80px;
+    }
+
+    .gift-heading {
+        margin-bottom: 38px;
+    }
+
+    .gift-heading h2 {
+        font-size: 48px;
+    }
+
+    .gift-heading p {
+        font-size: 19px;
+    }
+
+    .gift-cards {
+        gap: 23px;
+    }
+
+    .gift-card {
+        min-height: 235px;
+
+        padding: 22px 20px;
+
+        border-radius: 21px;
+    }
+
+    .bank-symbol {
+        width: 55px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+    .bank-brand > span {
+        font-size: 9px;
+    }
+
+    .gift-chip {
+        margin-top: 23px;
+
+        font-size: 30px;
+    }
+
+    .account-number {
+        font-size: 22px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .gift-card-bottom {
+        margin-top: 22px;
+    }
+
+    .account-owner h3 {
+        font-size: 19px;
+    }
+
+    .copy-account {
+        padding: 9px 11px;
+
+        font-size: 13px;
+    }
+
+    .gift-thanks {
+        margin-top: 50px;
+    }
+
+    .gift-thanks p {
+        font-size: 19px;
+    }
+
+}
+
+
+/* HP SANGAT KECIL */
+
+@media (max-width: 360px) {
+
+    .gift-card {
+        padding: 19px 14px;
+    }
+
+    .account-number {
+        font-size: 19px;
+    }
+
+    .account-owner h3 {
+        font-size: 17px;
+    }
+
+    .copy-account {
+        gap: 5px;
+
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* ==========================================
+   RSVP SECTION
+========================================== */
+
+.rsvp-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 18px 15px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    background: #b9a89e;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.rsvp-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 585px;
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   KARTU RSVP
+========================================== */
+
+.rsvp-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 860px;
+
+    padding: 75px 30px 65px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            rgba(250, 247, 245, 0.70),
+            rgba(250, 247, 245, 0.70)
+        ),
+        url('../images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 5px 25px rgba(80, 60, 45, 0.08);
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.rsvp-heading {
+    text-align: center;
+
+    margin-bottom: 47px;
+}
+
+.rsvp-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    color: #927c56;
+
+    margin: 0 0 24px;
+}
+
+.rsvp-heading p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    color: #493a30;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+#rsvpForm {
+    width: 100%;
+}
+
+
+/* ==========================================
+   INPUT DAN TEXTAREA
+========================================== */
+
+.rsvp-field {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 24px;
+}
+
+.rsvp-field input,
+.rsvp-field textarea {
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #d0ccd0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #55473c;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    transition: border 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.rsvp-field input {
+    height: 65px;
+
+    padding: 0 21px;
+}
+
+.rsvp-field textarea {
+    min-height: 147px;
+
+    padding: 17px 21px;
+
+    resize: vertical;
+}
+
+.rsvp-field input::placeholder,
+.rsvp-field textarea::placeholder {
+    color: #b7b3bb;
+
+    opacity: 1;
+}
+
+.rsvp-field input:focus,
+.rsvp-field textarea:focus {
+    border-color: #a18b6b;
+
+    box-shadow:
+        0 0 0 3px rgba(161, 139, 107, 0.10);
+}
+
+
+/* ==========================================
+   PESAN ERROR
+========================================== */
+
+.rsvp-error {
+    display: none;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-top: 8px;
+
+    border-radius: 11px;
+
+    background: #ffebeb;
+
+    color: #d9535d;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+}
+
+.rsvp-error.show {
+    display: block;
+}
+
+
+/* ==========================================
+   KONFIRMASI KEHADIRAN
+========================================== */
+
+.attendance-section {
+    margin-top: 26px;
+}
+
+.attendance-title {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 300;
+
+    color: #65513e;
+
+    margin: 0 0 10px;
+}
+
+
+/* PILIHAN */
+
+.attendance-options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* LABEL */
+
+.attendance-option {
+    position: relative;
+
+    min-height: 54px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #d9d2c8;
+
+    border-radius: 40px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* RADIO DISEMBUNYIKAN */
+
+.attendance-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ISI PILIHAN */
+
+.attendance-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 300;
+}
+
+.hadir .attendance-content {
+    color: #27ad58;
+}
+
+.tidak-hadir .attendance-content {
+    color: #f04444;
+}
+
+.attendance-content i {
+    font-size: 19px;
+}
+
+
+/* SAAT DIPILIH */
+
+.attendance-option:has(input:checked) {
+    border-color: #a18b6b;
+
+    background: #f5eee7;
+
+    box-shadow:
+        0 3px 10px rgba(120, 95, 70, 0.10);
+}
+
+
+/* ==========================================
+   TOMBOL KIRIM
+========================================== */
+
+.rsvp-submit {
+    width: 100%;
+
+    height: 57px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 21px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #b29b8e,
+        #947e70
+    );
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.rsvp-submit i {
+    display: none;
+}
+
+.rsvp-submit:hover {
+    background: #806c5f;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(100, 75, 60, 0.18);
+}
+
+.rsvp-submit:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ==========================================
+   PESAN BERHASIL
+========================================== */
+
+.rsvp-success {
+    display: none;
+
+    text-align: center;
+
+    padding: 30px 15px;
+}
+
+.rsvp-success.show {
+    display: block;
+}
+
+.rsvp-success > i {
+    font-size: 45px;
+
+    color: #a18b6b;
+
+    margin-bottom: 15px;
+}
+
+.rsvp-success h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    color: #927c56;
+
+    margin: 0 0 10px;
+}
+
+.rsvp-success p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    line-height: 1.5;
+
+    color: #65513e;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .rsvp-section {
+        padding: 12px;
+    }
+
+    .rsvp-card {
+        min-height: 820px;
+
+        padding: 70px 28px 60px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+        padding: 3px 0;
+    }
+
+    .rsvp-container {
+        max-width: 100%;
+    }
+
+    .rsvp-card {
+        min-height: calc(100vh - 6px);
+
+        padding: 85px 30px 55px;
+
+        border-radius: 28px;
+    }
+
+    .rsvp-heading {
+        margin-bottom: 45px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 48px;
+
+        margin-bottom: 24px;
+    }
+
+    .rsvp-heading p {
+        font-size: 17px;
+    }
+
+    .rsvp-field {
+        margin-bottom: 22px;
+    }
+
+    .rsvp-field input {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .rsvp-field textarea {
+        min-height: 147px;
+
+        padding: 17px 20px;
+    }
+
+    .rsvp-field input,
+    .rsvp-field textarea {
+        font-size: 15px;
+    }
+
+    .attendance-section {
+        margin-top: 25px;
+    }
+
+    .attendance-title {
+        font-size: 16px;
+    }
+
+    .attendance-options {
+        gap: 12px;
+    }
+
+    .attendance-option {
+        min-height: 53px;
+    }
+
+    .attendance-content {
+        gap: 8px;
+
+        font-size: 15px;
+    }
+
+    .attendance-content i {
+        font-size: 17px;
+    }
+
+    .rsvp-submit {
+        height: 57px;
+
+        margin-top: 21px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* ==========================================
+   HP KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .rsvp-card {
+        padding: 70px 19px 45px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 43px;
+    }
+
+    .attendance-options {
+        gap: 8px;
+    }
+
+    .attendance-content {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================
+   RSVP - MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 600px) {
+
+    .rsvp-section {
+        width: 100%;
+        padding: 65px 16px;
+        overflow: hidden;
+    }
+
+    .rsvp-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Kartu RSVP */
+
+    .rsvp-card {
+        width: 100%;
+        padding: 28px 20px;
+        border-radius: 18px;
+        box-sizing: border-box;
+    }
+
+    /* Judul RSVP */
+
+    .rsvp-heading {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .rsvp-heading span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 8px 0;
+    }
+
+    .rsvp-heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* Label Form */
+
+    .rsvp-field {
+        margin-bottom: 18px;
+    }
+
+    .rsvp-field label {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    /* Input dan Textarea */
+
+    .rsvp-field input,
+    .rsvp-field textarea,
+    #rsvpName,
+    #rsvpMessage {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 13px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+        min-height: 46px;
+    }
+
+    #rsvpMessage {
+        min-height: 110px;
+        resize: vertical;
+    }
+
+    /* Pesan Error */
+
+    .rsvp-field .error-message {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+    /* Pilihan Kehadiran */
+
+    .attendance-section {
+        margin-top: 22px;
+    }
+
+    .attendance-section > label,
+    .attendance-section > p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .attendance-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .attendance-option {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 13px;
+        border-radius: 11px;
+    }
+
+    .attendance-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .attendance-content i {
+        font-size: 17px;
+    }
+
+    .attendance-content span {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Tombol Kirim */
+
+    .rsvp-submit {
+        width: 100%;
+        min-height: 47px;
+        margin-top: 20px;
+        padding: 13px 18px;
+        font-size: 13px;
+        border-radius: 30px;
+    }
+
+    /* Pesan Berhasil */
+
+    .rsvp-success {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    .rsvp-success h3 {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    .rsvp-success p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE KECIL
+========================================== */
+
+@media screen and (max-width: 380px) {
+
+    .rsvp-section {
+        padding: 50px 12px;
+    }
+
+    .rsvp-card {
+        padding: 23px 16px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 27px;
+    }
+
+    .rsvp-field input,
+    .rsvp-field textarea,
+    #rsvpName,
+    #rsvpMessage {
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+/* ==========================================
+   WEDDING CLOSING
+   HABIB & ADIBA
+========================================== */
+
+.closing-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 870px;
+
+    padding: 28px 20px 65px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(250, 247, 244, 0.70),
+            rgba(250, 247, 244, 0.70)
+        ),
+        url('../images/back.jpg');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    color: #65513e;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.closing-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   FOTO PASANGAN
+========================================== */
+
+.closing-photo {
+    position: relative;
+
+    width: 260px;
+    height: 394px;
+
+    overflow: hidden;
+
+    border: 3px solid #ffffff;
+
+    border-radius: 150px;
+
+    background: #e5e1df;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.22);
+
+    margin-bottom: 42px;
+}
+
+.closing-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: inherit;
+}
+
+
+/* ==========================================
+   UCAPAN TERIMA KASIH
+========================================== */
+
+.closing-message {
+    width: 100%;
+    max-width: 610px;
+
+    margin: 0 auto;
+}
+
+.closing-message p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1.38;
+
+    color: #493a30;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   SALAM PENUTUP
+========================================== */
+
+.closing-greeting {
+    width: 100%;
+
+    margin-top: 45px;
+}
+
+.closing-greeting p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    color: #65513e;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   NAMA PASANGAN
+========================================== */
+
+.closing-names {
+    width: 100%;
+
+    margin-top: 22px;
+}
+
+.closing-names h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    color: #927c56;
+
+    margin: 0;
+}
+
+.closing-names h2 span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-weight: 400;
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .closing-section {
+        min-height: 850px;
+
+        padding: 28px 20px 60px;
+
+        background-position: center center;
+    }
+
+    .closing-photo {
+        width: 255px;
+        height: 385px;
+    }
+
+    .closing-message p {
+        font-size: 19px;
+    }
+
+    .closing-names h2 {
+        font-size: 59px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .closing-section {
+        min-height: 870px;
+
+        padding: 28px 23px 55px;
+
+        background-position: center center;
+    }
+
+    .closing-container {
+        max-width: 100%;
+    }
+
+    .closing-photo {
+        width: 260px;
+        height: 394px;
+
+        margin-bottom: 42px;
+    }
+
+    .closing-message {
+        max-width: 100%;
+    }
+
+    .closing-message p {
+        font-size: 19px;
+
+        line-height: 1.42;
+    }
+
+    .closing-greeting {
+        margin-top: 45px;
+    }
+
+    .closing-greeting p {
+        font-size: 21px;
+    }
+
+    .closing-names {
+        margin-top: 24px;
+    }
+
+    .closing-names h2 {
+        font-size: 58px;
+    }
+
+}
+
+
+/* ==========================================
+   HP KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .closing-section {
+        min-height: 810px;
+
+        padding: 25px 17px 45px;
+    }
+
+    .closing-photo {
+        width: 235px;
+        height: 355px;
+
+        margin-bottom: 35px;
+    }
+
+    .closing-message p {
+        font-size: 17px;
+    }
+
+    .closing-greeting {
+        margin-top: 35px;
+    }
+
+    .closing-greeting p {
+        font-size: 19px;
+    }
+
+    .closing-names h2 {
+        font-size: 49px;
+    }
+
+}
+
+
+
+/* ==========================================
+   WEDDING FOOTER - RESPONSIVE
+========================================== */
+
+.simple-footer {
+    position: relative;
+
+    width: 100%;
+    min-height: 175px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 35px 15px 25px;
+
+    background: #b9a89e;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   FOOTER CREDIT
+========================================== */
+
+.footer-credit {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: #ffffff;
+}
+
+.footer-credit i {
+    color: #ed304b;
+
+    font-size: 13px;
+
+    margin: 0 2px;
+}
+
+
+/* ==========================================
+   SOCIAL MEDIA
+========================================== */
+
+.footer-social {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-top: 18px;
+}
+
+.footer-social a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: #ffffff;
+
+    font-size: 40px;
+
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .simple-footer {
+        min-height: 155px;
+
+        padding: 29px 12px 20px;
+    }
+
+    .footer-credit {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .footer-credit i {
+        font-size: 11px;
+    }
+
+    .footer-social {
+        gap: 12px;
+
+        margin-top: 15px;
+    }
+
+    .footer-social a {
+        width: 36px;
+        height: 36px;
+
+        font-size: 34px;
+    }
+
+}
+
+
+/* ==========================================
+   HP KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    .simple-footer {
+        min-height: 145px;
+
+        padding-top: 25px;
+    }
+
+    .footer-credit {
+        font-size: 11px;
+    }
+
+    .footer-social {
+        gap: 10px;
+
+        margin-top: 13px;
+    }
+
+    .footer-social a {
+        width: 33px;
+        height: 33px;
+
+        font-size: 31px;
+    }
+
+}
+
+
+
+
+
+
+/* =================================================
+   FINAL RESPONSIVE DESIGN
+   WEDDING HABIB & ADIBA
+   KHUSUS TABLET DAN MOBILE
+================================================= */
+
+
+/* ================================================
+   TABLET
+================================================ */
+
+@media (max-width: 768px) {
+
+    .cover-heading h1 {
+        font-size: 45px;
+    }
+
+    .couple-name {
+        font-size: 54px;
+    }
+
+    .person-name {
+        font-size: 39px;
+    }
+
+    .event-detail h2 {
+        font-size: 46px;
+    }
+
+    .love-story-heading h2,
+    .gallery-heading h2,
+    .gift-heading h2 {
+        font-size: 43px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 46px;
+    }
+
+    .closing-names h2 {
+        font-size: 52px;
+    }
+
+}
+
+
+/* ================================================
+   MOBILE UTAMA
+================================================ */
+
+@media (max-width: 600px) {
+
+    /* GLOBAL */
+
+    body {
+        font-size: 14px;
+        line-height: 1.55;
+        overflow-x: hidden;
+    }
+
+    /* COVER */
+
+    .cover-heading {
+        padding-top: 55px;
+    }
+
+    .wedding-text {
+        font-size: 17px;
+        margin-bottom: 22px;
+    }
+
+    .cover-heading h1 {
+        font-size: clamp(35px, 9vw, 43px);
+    }
+
+    .guest-label {
+        font-size: 17px;
+        margin-bottom: 18px;
+    }
+
+    .cover-bottom h3 {
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+
+    .open-button {
+        min-width: 175px;
+        padding: 11px 22px;
+        font-size: 16px;
+    }
+
+
+    /* HALAMAN UTAMA */
+
+    .wedding-subtitle {
+        font-size: 17px;
+    }
+
+    .couple-photo {
+        width: min(230px, 62vw);
+        height: min(345px, 43vh);
+    }
+
+    .couple-name {
+        font-size: clamp(38px, 10vw, 48px);
+    }
+
+    .wedding-date {
+        font-size: 17px;
+    }
+
+
+    /* TOMBOL MUSIK */
+
+    .music-button {
+        width: 43px;
+        height: 43px;
+        right: 12px;
+        font-size: 19px;
+    }
+
+
+    /* AYAT PERNIKAHAN */
+
+    .ayat-section {
+        min-height: 490px;
+        padding: 65px 22px 40px;
+    }
+
+    .ayat-logo {
+        width: 115px;
+        height: 90px;
+        margin-bottom: 28px;
+    }
+
+    .ayat-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .ayat-reference {
+        margin-top: 23px;
+    }
+
+    .ayat-reference p {
+        font-size: 17px;
+    }
+
+
+    /* PROFIL MEMPELAI */
+
+    .bride-groom-section {
+        padding: 55px 18px 55px;
+    }
+
+    .invitation-intro {
+        margin-bottom: 28px;
+    }
+
+    .invitation-intro h3 {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .invitation-intro p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .person-photo {
+        width: min(225px, 62vw);
+        height: min(340px, 88vw);
+    }
+
+    .person-name {
+        font-size: 36px;
+        margin-top: 18px;
+        margin-bottom: 17px;
+    }
+
+    .person-parents {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .couple-separator {
+        height: 80px;
+        font-size: 35px;
+    }
+
+    .instagram-button {
+        width: 39px;
+        height: 39px;
+        margin-top: 23px;
+        font-size: 19px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+        min-height: auto;
+        padding: 45px 16px;
+    }
+
+    .countdown-card {
+        border-radius: 24px;
+    }
+
+    .countdown-photo {
+        height: clamp(230px, 68vw, 340px);
+    }
+
+    .photo-fade {
+        height: 110px;
+    }
+
+    .countdown-timer {
+        min-height: 90px;
+        padding: 10px 5px 14px;
+    }
+
+    .time-item h2 {
+        font-size: 32px;
+        margin-bottom: 4px;
+    }
+
+    .time-item span {
+        font-size: 13px;
+    }
+
+
+    /* DETAIL ACARA */
+
+    .event-section {
+        padding: 45px 13px 50px;
+    }
+
+    .event-intro {
+        padding: 0 8px;
+        margin-bottom: 25px;
+    }
+
+    .event-intro p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .event-arch {
+        padding: 105px 16px 90px;
+        min-height: 980px;
+    }
+
+    .event-detail h2 {
+        font-size: 42px;
+    }
+
+    .event-line {
+        margin: 20px auto 25px;
+    }
+
+    .event-detail h3 {
+        font-size: 19px;
+    }
+
+    .event-time {
+        font-size: 16px;
+        margin: 25px 0;
+    }
+
+    .event-location {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 30px;
+    }
+
+    .location-button {
+        min-width: 175px;
+        padding: 10px 19px;
+        font-size: 16px;
+        gap: 9px;
+    }
+
+    .location-button i {
+        font-size: 16px;
+    }
+
+    .reception-detail {
+        margin-top: 85px;
+    }
+
+
+    /* LOVE STORY */
+
+    .love-story-section {
+        padding: 55px 15px 65px;
+    }
+
+    .love-story-heading {
+        margin-bottom: 42px;
+    }
+
+    .love-story-heading h2 {
+        font-size: 40px;
+    }
+
+    .love-story-heading p {
+        font-size: 16px;
+    }
+
+    .story-subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .story-item {
+        margin-bottom: 38px;
+    }
+
+    .story-marker {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .story-card {
+        border-radius: 17px;
+    }
+
+    .story-image {
+        height: 190px;
+    }
+
+    .story-content {
+        padding: 20px 16px 23px;
+    }
+
+    .story-content h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .story-content p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .story-date {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .story-closing {
+        margin-top: 45px;
+    }
+
+    .story-closing p {
+        font-size: 18px;
+    }
+
+    .story-closing span {
+        font-size: 21px;
+    }
+
+    .closing-heart {
+        width: 43px;
+        height: 43px;
+        font-size: 17px;
+    }
+
+
+    /* GALERI */
+
+    .gallery-section {
+        padding: 55px 14px 60px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 28px;
+    }
+
+    .gallery-heading > span {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 40px;
+    }
+
+    .gallery-heading p {
+        font-size: 16px;
+    }
+
+    .gallery-grid {
+        gap: 9px;
+    }
+
+    .gallery-item {
+        height: 165px;
+        padding: 3px;
+        border-radius: 15px;
+    }
+
+    .gallery-item img {
+        border-radius: 11px;
+    }
+
+    .gallery-overlay {
+        font-size: 20px;
+    }
+
+    .video-play-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .video-label {
+        font-size: 10px;
+        padding: 4px 9px;
+    }
+
+    .gallery-footer {
+        margin-top: 30px;
+    }
+
+    .gallery-footer i {
+        font-size: 19px;
+    }
+
+    .gallery-footer p {
+        font-size: 17px;
+    }
+
+    .gallery-footer span {
+        font-size: 21px;
+    }
+
+    .lightbox-close {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .lightbox-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .lightbox-counter {
+        font-size: 14px;
+    }
+
+
+    /* WEDDING GIFT */
+
+    .gift-section {
+        padding: 55px 15px 65px;
+    }
+
+    .gift-heading {
+        margin-bottom: 30px;
+    }
+
+    .gift-heading > span {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .gift-heading h2 {
+        font-size: 40px;
+    }
+
+    .gift-heading p {
+        font-size: 16px;
+    }
+
+    .gift-cards {
+        gap: 17px;
+    }
+
+    .gift-card {
+        min-height: 205px;
+        padding: 19px 17px;
+        border-radius: 18px;
+    }
+
+    .bank-symbol {
+        width: 45px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .bank-brand {
+        gap: 9px;
+    }
+
+    .bank-brand > span {
+        font-size: 9px;
+    }
+
+    .bank-contactless {
+        font-size: 19px;
+    }
+
+    .gift-chip {
+        font-size: 25px;
+        margin-top: 18px;
+    }
+
+    .account-number {
+        font-size: clamp(17px, 5vw, 20px);
+        letter-spacing: 1px;
+        margin-top: 8px;
+    }
+
+    .gift-card-bottom {
+        margin-top: 17px;
+        gap: 7px;
+    }
+
+    .account-owner span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .account-owner h3 {
+        font-size: 16px;
+    }
+
+    .copy-account {
+        padding: 8px 10px;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .gift-thanks {
+        margin-top: 38px;
+    }
+
+    .gift-heart {
+        width: 43px;
+        height: 43px;
+        font-size: 17px;
+    }
+
+    .gift-thanks p {
+        font-size: 16px;
+    }
+
+    .gift-thanks h3 {
+        font-size: 23px;
+    }
+
+
+    /* RSVP */
+
+    .rsvp-section {
+        min-height: auto;
+        padding: 3px 0;
+    }
+
+    .rsvp-card {
+        min-height: auto;
+        padding: 50px 20px 40px;
+        border-radius: 23px;
+    }
+
+    .rsvp-heading {
+        margin-bottom: 30px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    .rsvp-heading p {
+        font-size: 15px;
+    }
+
+    .rsvp-field {
+        margin-bottom: 16px;
+    }
+
+    .rsvp-field input {
+        height: 54px;
+        padding: 0 15px;
+    }
+
+    .rsvp-field textarea {
+        min-height: 120px;
+        padding: 14px 15px;
+    }
+
+    .rsvp-field input,
+    .rsvp-field textarea {
+        font-size: 14px;
+    }
+
+    .rsvp-error {
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .attendance-section {
+        margin-top: 19px;
+    }
+
+    .attendance-title {
+        font-size: 14px;
+    }
+
+    .attendance-options {
+        gap: 8px;
+    }
+
+    .attendance-option {
+        min-height: 45px;
+    }
+
+    .attendance-content {
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    .attendance-content i {
+        font-size: 15px;
+    }
+
+    .rsvp-submit {
+        height: 48px;
+        min-height: 48px;
+        margin-top: 16px;
+        font-size: 15px;
+    }
+
+    .rsvp-success > i {
+        font-size: 38px;
+    }
+
+    .rsvp-success h3 {
+        font-size: 28px;
+    }
+
+    .rsvp-success p {
+        font-size: 16px;
+    }
+
+
+    /* WEDDING CLOSING */
+
+    .closing-section {
+        min-height: auto;
+        padding: 35px 17px 55px;
+    }
+
+    .closing-photo {
+        width: min(225px, 62vw);
+        height: min(340px, 94vw);
+        margin-bottom: 30px;
+    }
+
+    .closing-message p {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .closing-greeting {
+        margin-top: 30px;
+    }
+
+    .closing-greeting p {
+        font-size: 18px;
+    }
+
+    .closing-names {
+        margin-top: 17px;
+    }
+
+    .closing-names h2 {
+        font-size: clamp(43px, 11vw, 51px);
+    }
+
+
+    /* FOOTER */
+
+    .simple-footer {
+        min-height: 135px;
+        padding: 25px 12px 18px;
+    }
+
+    .footer-credit {
+        font-size: 11px;
+    }
+
+    .footer-credit i {
+        font-size: 11px;
+    }
+
+    .footer-social {
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .footer-social a {
+        width: 33px;
+        height: 33px;
+        font-size: 31px;
+    }
+
+}
+
+
+/* ================================================
+   HP KECIL - MAKSIMAL 380PX
+================================================ */
+
+@media (max-width: 380px) {
+
+    .cover-heading h1 {
+        font-size: 34px;
+    }
+
+    .guest-label {
+        font-size: 15px;
+    }
+
+    .open-button {
+        min-width: 165px;
+        font-size: 15px;
+    }
+
+    .couple-name {
+        font-size: 38px;
+    }
+
+    .wedding-date {
+        font-size: 15px;
+    }
+
+    .person-name {
+        font-size: 33px;
+    }
+
+    .person-parents,
+    .invitation-intro p {
+        font-size: 15px;
+    }
+
+    .time-item h2 {
+        font-size: 28px;
+    }
+
+    .time-item span {
+        font-size: 12px;
+    }
+
+    .event-detail h2 {
+        font-size: 37px;
+    }
+
+    .event-detail h3 {
+        font-size: 17px;
+    }
+
+    .event-time,
+    .event-location {
+        font-size: 15px;
+    }
+
+    .love-story-heading h2,
+    .gallery-heading h2,
+    .gift-heading h2 {
+        font-size: 35px;
+    }
+
+    .story-content h3 {
+        font-size: 23px;
+    }
+
+    .gallery-item {
+        height: 145px;
+    }
+
+    .account-number {
+        font-size: 16px;
+    }
+
+    .account-owner h3 {
+        font-size: 14px;
+    }
+
+    .copy-account {
+        font-size: 11px;
+        padding: 7px 8px;
+    }
+
+    .rsvp-heading h2 {
+        font-size: 37px;
+    }
+
+    .attendance-content {
+        font-size: 12px;
+    }
+
+    .closing-names h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+
+
+
+/* ==========================================
+   TRANSISI PEMBUKAAN UNDANGAN
+========================================== */
+
+#cover {
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s ease,
+        filter 0.8s ease;
+    transform-origin: center;
+}
+
+#cover.cover-exit {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(12px);
+    pointer-events: none;
+}
+
+#mainInvitation.page-entering,
+#isiUndangan.page-entering {
+    animation: invitationEnter 1.2s ease both;
+}
+
+@keyframes invitationEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* Animasi awal halaman utama */
+
+#mainInvitation.active {
+    animation: mainReveal 1.2s ease both;
+}
+
+@keyframes mainReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* ==========================================
+   GLOBAL SCROLL REVEAL
+========================================== */
+
+.motion-item {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(4px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2,.7,.2,1),
+        filter 0.9s ease;
+
+    transition-delay: var(--motion-delay, 0ms);
+}
+
+.motion-item.show-motion {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+
+/* Judul section */
+
+.motion-heading {
+    transform: translateY(25px);
+    letter-spacing: 3px;
+}
+
+.motion-heading.show-motion {
+    letter-spacing: normal;
+}
+
+
+/* Foto */
+
+.motion-image {
+    transform: scale(0.94);
+    opacity: 0;
+    transition:
+        transform 1.2s ease,
+        opacity 1s ease;
+}
+
+.motion-image.show-motion {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* Kartu */
+
+.motion-card {
+    transform: translateY(45px) scale(0.96);
+    opacity: 0;
+    transition:
+        transform 0.9s ease,
+        opacity 0.9s ease;
+}
+
+.motion-card.show-motion {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+
+/* Icon */
+
+.motion-icon {
+    transform: scale(0.5) rotate(-15deg);
+    opacity: 0;
+    transition:
+        transform 0.7s cubic-bezier(.34,1.56,.64,1),
+        opacity 0.6s ease;
+}
+
+.motion-icon.show-motion {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+}
+
+
+
+/* ==========================================
+   ANIMASI TYPOGRAPHY
+========================================== */
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* Nama pasangan */
+
+.couple-name,
+.closing-names {
+    animation: textReveal 1.5s ease both;
+}
+
+
+/* Judul */
+
+h1, h2, h3 {
+    animation-fill-mode: both;
+}
+
+
+/* Efek hover tulisan */
+
+.section-heading h2,
+.rsvp-heading h2,
+.gift-heading h2 {
+    transition: letter-spacing 0.5s ease;
+}
+
+.section-heading h2:hover,
+.rsvp-heading h2:hover,
+.gift-heading h2:hover {
+    letter-spacing: 2px;
+}
+
+
+/* Paragraf */
+
+section p {
+    transition: color 0.4s ease;
+}
+
+
+
+/* ==========================================
+   ICON ANIMATION
+========================================== */
+
+.event-icon i,
+.gift-card i,
+.attendance-content i,
+.footer-social i {
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.event-icon:hover i,
+.gift-card:hover i,
+.attendance-content:hover i {
+    transform: translateY(-5px) scale(1.12);
+}
+
+
+/* Icon floating */
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.event-icon i {
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+
+/* Tombol */
+
+button,
+.copy-account,
+.rsvp-submit {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+button:hover,
+.copy-account:hover,
+.rsvp-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(80, 55, 40, 0.15);
+}
+
+button:active,
+.copy-account:active,
+.rsvp-submit:active {
+    transform: scale(0.96);
+}

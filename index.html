@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Wedding of Qiyats & Alfira</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         HALAMAN COVER UNDANGAN
+    ================================== -->
+
+    <section class="cover" id="cover">
+
+        <div class="cover-overlay"></div>
+
+        <div class="cover-heading">
+
+            <p class="wedding-text">The Wedding of</p>
+
+            <h1>Qiyats <span>&</span> Alfira</h1>
+
+        </div>
+
+        <div class="cover-bottom">
+
+            <p class="guest-label">
+                Kepada Bapak/Ibu/Saudara/i
+            </p>
+
+            <h3 id="guestName">Nama Tamu</h3>
+
+            <button class="open-button" id="openInvitation">
+                Buka Undangan
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         SELURUH ISI UNDANGAN
+    ================================== -->
+
+    <div id="isiUndangan" style="display: none;">
+
+        <!-- HALAMAN UTAMA -->
+
+        <section class="home-wedding">
+
+            <div class="home-content">
+
+                <p class="wedding-subtitle">
+                    THE WEDDING OF
+                </p>
+
+                <div class="couple-photo">
+
+                    <img src="images/1.jpg" alt="Qiyats & Alfira">
+
+                </div>
+
+                <h1 class="couple-name">
+                    Qiyats & Alfira
+                </h1>
+
+                <p class="wedding-date">
+                    Senin, 28 Desember 2026
+                </p>
+
+            </div>
+
+            <button class="music-button" id="musicButton">
+                <i class="fa-solid fa-compact-disc"></i>
+            </button>
+
+            <audio id="weddingMusic" loop>
+                <source src="audio/music.mp3" type="audio/mpeg">
+            </audio>
+
+        </section>
+
+
+        <!-- AYAT PERNIKAHAN -->
+
+        <section class="ayat-section" id="ayat">
+
+            <div class="ayat-content">
+
+                <div class="ayat-logo">
+                    <img src="images/qa.jpg" alt="Logo HA">
+                </div>
+
+                <div class="ayat-text">
+
+                    <p>
+                        “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                        menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+                        agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
+                        menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya
+                        pada yang demikian itu benar-benar terdapat tanda-tanda
+                        (kebesaran Allah) bagi kaum yang berpikir.”
+                    </p>
+
+                </div>
+
+                <div class="ayat-reference">
+                    <p>(Qs. Ar-Rum : 21)</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+<!-- =========================================
+     SECTION PROFIL KEDUA MEMPELAI
+========================================= -->
+
+<section class="bride-groom-section" id="bride-groom">
+
+    <div class="bride-groom-container">
+
+        <!-- PEMBUKA -->
+        <div class="invitation-intro">
+
+            <h3>Assalamu’alaikum Wr. Wb</h3>
+
+            <p>
+                Tanpa mengurangi rasa hormat, kami mengundang
+                Bapak/Ibu/Saudara/i serta kerabat sekalian untuk
+                menghadiri acara pernikahan kami.
+            </p>
+
+        </div>
+
+
+        <!-- MEMPELAI PRIA -->
+        <div class="person-profile groom-profile">
+
+            <div class="person-photo">
+
+                <img src="images/qiyats.jpg" alt="Mohran Qiyats">
+
+            </div>
+
+            <h2 class="person-name">
+                Mohran Qiyats
+            </h2>
+
+            <p class="person-parents">
+                Putra Pertama dari Bapak Hj Ismail Salasa
+                <br>
+                & Ibu Aisyah A Rahman
+            </p>
+
+        </div>
+
+
+        <!-- SIMBOL PENGHUBUNG -->
+        <div class="couple-separator">
+            &
+        </div>
+
+
+        <!-- MEMPELAI WANITA -->
+        <div class="person-profile bride-profile">
+
+            <div class="person-photo">
+
+                <img src="images/pia.jpg" alt="Alfira Oktaviani Datukramat">
+
+            </div>
+
+            <h2 class="person-name">
+                Alfira Oktaviani Datukramat
+            </h2>
+
+            <p class="person-parents">
+                Putri Pertama dari Bapak Zainal Datukramat
+                <br>
+                & Ibu Nurhasrah Paturusi
+            </p>
+
+
+            <!-- INSTAGRAM -->
+            <a href="https://instagram.com/"
+               target="_blank"
+               rel="noopener"
+               class="instagram-button"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        
+<!-- =====================================
+     COUNTDOWN PERNIKAHAN
+===================================== -->
+
+<section class="countdown-section" id="countdown">
+
+    <div class="countdown-container">
+
+        <div class="countdown-card">
+
+            <!-- FOTO PASANGAN -->
+            <div class="countdown-photo">
+
+                <img src="images/5.jpg"
+                     alt="Foto Prewedding Qiyats & Alfira">
+
+                <div class="photo-fade"></div>
+
+            </div>
+
+
+            <!-- HITUNG MUNDUR -->
+            <div class="countdown-timer">
+
+                <div class="time-item">
+                    <h2 id="days">00</h2>
+                    <span>Hari</span>
+                </div>
+
+                <div class="time-item">
+                    <h2 id="hours">00</h2>
+                    <span>Jam</span>
+                </div>
+
+                <div class="time-item">
+                    <h2 id="minutes">00</h2>
+                    <span>Menit</span>
+                </div>
+
+                <div class="time-item">
+                    <h2 id="seconds">00</h2>
+                    <span>Detik</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION DETAIL ACARA
+========================================= -->
+
+<section class="event-section" id="event">
+
+    <!-- KALIMAT PEMBUKA -->
+
+    <div class="event-intro">
+
+        <p>
+            Kami berharap Anda menjadi bagian dari hari istimewa
+            kami.
+        </p>
+
+    </div>
+
+
+    <!-- BINGKAI UTAMA ACARA -->
+
+    <div class="event-arch">
+
+        <!-- AKAD NIKAH -->
+
+        <div class="event-detail akad-detail">
+
+            <h2>Akad Nikah</h2>
+
+            <div class="event-line"></div>
+
+            <h3>Senin, 28 Desember 2026</h3>
+
+            <p class="event-time">
+                Pukul : 08.00 WIB
+            </p>
+
+            <p class="event-location">
+
+                Tempat :
+                <strong>KEDIAMAN MEMPELAI WANITA</strong>
+
+                <br>
+
+                Entrop, Entrop, Jayapura Selatan,
+                <br>
+                Papua
+
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Kediaman+Mempelai+Wanita+Ds+Pagu+Wates+Kediri+Jawa+Timur"
+                target="_blank"
+                rel="noopener"
+                class="location-button">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Lihat Lokasi
+
+            </a>
+
+        </div>
+
+
+        <!-- RESEPSI -->
+
+        <div class="event-detail reception-detail">
+
+            <h2>Resepsi</h2>
+
+            <div class="event-line"></div>
+
+            <h3>Senin, 28 Desember 2026</h3>
+
+            <p class="event-time">
+                Pukul : 10.00 WIB – Selesai
+            </p>
+
+            <p class="event-location">
+
+                Tempat :
+                <strong>KEDIAMAN MEMPELAI WANITA</strong>
+
+                <br>
+
+                Gedung PTC Entrop,
+                <br>
+                Papua
+
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Kediaman+Mempelai+Wanita+Ds+Pagu+Wates+Kediri+Jawa+Timur"
+                target="_blank"
+                rel="noopener"
+                class="location-button">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Lihat Lokasi
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LOVE STORY QIYATS & ALFIRA
+========================================= -->
+
+<section class="love-story-section" id="love-story">
+
+    <div class="love-story-container">
+
+        <!-- HEADING -->
+
+        <div class="love-story-heading">
+
+            <span class="story-subtitle">
+                OUR JOURNEY
+            </span>
+
+            <div class="story-heading-line"></div>
+
+            <p>
+                Setiap kisah memiliki cerita,
+                dan setiap perjalanan memiliki makna.
+                Inilah perjalanan cinta kami.
+            </p>
+
+        </div>
+
+
+        <!-- TIMELINE -->
+
+        <div class="love-timeline">
+
+
+            <!-- CERITA 1 -->
+
+            <div class="story-item">
+
+                <div class="story-card">
+
+                    <div class="story-image">
+
+                        <img src="images/4.jpg"
+                             alt="Awal Pertemuan Qiyats dan Alfira">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-date">
+                            AWAL PERJUMPAAN
+                        </span>
+
+                        <h3>Awal Bertemu</h3>
+
+                        <p>
+                            Setiap pertemuan memiliki cerita tersendiri.
+                            Dari sebuah perjumpaan sederhana,
+                            kami mulai mengenal satu sama lain
+                            dan menemukan cerita yang tidak pernah
+                            kami bayangkan sebelumnya.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERITA 2 -->
+
+            <div class="story-item">
+
+                <div class="story-card">
+
+                    <div class="story-image">
+
+                        <img src="images/2.jpg"
+                             alt="Perjalanan Cinta Qiyats dan Alfira">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-date">
+                            PERJALANAN BERSAMA
+                        </span>
+
+                        <h3>Menjalin Cerita</h3>
+
+                        <p>
+                            Seiring berjalannya waktu, kami belajar
+                            memahami, menghargai, dan saling menguatkan.
+                            Berbagai cerita dan pengalaman menjadi
+                            bagian indah dari perjalanan kami.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERITA 3 -->
+
+            <div class="story-item">
+
+                <div class="story-card">
+
+                    <div class="story-image">
+
+                        <img src="images/1.jpg"
+                             alt="Hari Bahagia Qiyats dan Alfira">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-date">
+                            28 DESEMBER 2026
+                        </span>
+
+                        <h3>Hari Istimewa</h3>
+
+                        <p>
+                            Dengan izin Allah SWT, kami memutuskan
+                            untuk melangkah bersama dalam ikatan
+                            pernikahan. Memulai perjalanan baru,
+                            membangun keluarga, dan mengukir cerita
+                            bersama hingga akhir hayat.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PENUTUP -->
+
+        <div class="story-closing">
+
+            <p>
+                "Dan semoga perjalanan ini menjadi
+                awal dari selamanya."
+            </p>
+
+            <span>Qiyats & Alfira</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     GALERI FOTO & VIDEO
+========================================= -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="gallery-container">
+
+        <!-- JUDUL GALERI -->
+
+        <div class="gallery-heading">
+
+            <span>OUR MEMORIES</span>
+
+            <div class="gallery-line"></div>
+
+            <p>
+                Setiap momen memiliki cerita,
+                setiap kenangan memiliki tempat istimewa
+                di hati kami.
+            </p>
+
+        </div>
+
+
+        <!-- GRID GALERI -->
+
+        <div class="gallery-grid">
+
+            <!-- FOTO 1 -->
+
+            <button class="gallery-item"
+                    type="button"
+                    data-type="image"
+                    data-src="images/gallery-1.jpg"
+                    aria-label="Lihat foto 1">
+
+                <img src="images/gallery-1.jpg"
+                     alt="Kenangan Qiyats dan Alfira"
+                     loading="lazy">
+
+                <span class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <!-- FOTO 2 -->
+
+            <button class="gallery-item"
+                    type="button"
+                    data-type="image"
+                    data-src="images/gallery-2.jpg"
+                    aria-label="Lihat foto 2">
+
+                <img src="images/gallery-2.jpg"
+                     alt="Foto prewedding Qiyats dan Alfira"
+                     loading="lazy">
+
+                <span class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <!-- VIDEO 1 -->
+
+            <button class="gallery-item gallery-video"
+                    type="button"
+                    data-type="video"
+                    data-src="videos/prewedding.mp4"
+                    data-poster="images/video-poster.jpg"
+                    aria-label="Putar video prewedding">
+
+                <img src="images/video-poster.jpg"
+                     alt="Video prewedding Qiyats dan Alfira"
+                     loading="lazy">
+
+                <span class="video-play-icon">
+                    <i class="fa-solid fa-play"></i>
+                </span>
+
+                <span class="video-label">VIDEO</span>
+
+            </button>
+
+
+            <!-- FOTO 3 -->
+
+            <button class="gallery-item"
+                    type="button"
+                    data-type="image"
+                    data-src="images/gallery-3.jpg"
+                    aria-label="Lihat foto 3">
+
+                <img src="images/gallery-3.jpg"
+                     alt="Kenangan pasangan"
+                     loading="lazy">
+
+                <span class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <!-- FOTO 4 -->
+
+            <button class="gallery-item"
+                    type="button"
+                    data-type="image"
+                    data-src="images/gallery-4.jpg"
+                    aria-label="Lihat foto 4">
+
+                <img src="images/gallery-4.jpg"
+                     alt="Foto Qiyats dan Alfira"
+                     loading="lazy">
+
+                <span class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <!-- FOTO 5 -->
+
+            <button class="gallery-item"
+                    type="button"
+                    data-type="image"
+                    data-src="images/gallery-5.jpg"
+                    aria-label="Lihat foto 5">
+
+                <img src="images/gallery-5.jpg"
+                     alt="Momen prewedding"
+                     loading="lazy">
+
+                <span class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- PENUTUP -->
+
+        <div class="gallery-footer">
+
+            <p>
+                A thousand memories, one beautiful story.
+            </p>
+
+            <span>Qiyats & Alfira</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         LIGHTBOX
+    ====================================== -->
+
+    <div class="gallery-lightbox"
+         id="galleryLightbox"
+         aria-hidden="true">
+
+        <button class="lightbox-close"
+                id="lightboxClose"
+                type="button"
+                aria-label="Tutup galeri">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <button class="lightbox-nav lightbox-prev"
+                id="lightboxPrev"
+                type="button"
+                aria-label="Media sebelumnya">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <div class="lightbox-content">
+
+            <img id="lightboxImage"
+                 src=""
+                 alt="Foto galeri"
+                 style="display:none;">
+
+            <video id="lightboxVideo"
+                   controls
+                   playsinline
+                   preload="metadata"
+                   style="display:none;">
+
+                Browser Anda tidak mendukung video.
+
+            </video>
+
+        </div>
+
+
+        <button class="lightbox-nav lightbox-next"
+                id="lightboxNext"
+                type="button"
+                aria-label="Media berikutnya">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+        <div class="lightbox-counter" id="lightboxCounter">
+            1 / 6
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WEDDING GIFT
+========================================= -->
+
+<section class="gift-section" id="gift">
+
+    <div class="gift-container">
+
+        <!-- JUDUL -->
+
+        <div class="gift-heading">
+
+            <span>WEDDING GIFT</span>
+
+            <h2>Tanda Kasih</h2>
+
+            <div class="gift-line"></div>
+
+            <p>
+                Doa restu Anda merupakan karunia yang sangat berarti
+                bagi kami. Namun apabila ingin memberikan tanda kasih,
+                dapat melalui informasi berikut.
+            </p>
+
+        </div>
+
+
+        <!-- KARTU REKENING -->
+
+        <div class="gift-cards">
+
+
+            <!-- REKENING 1 -->
+
+            <div class="gift-card">
+
+                <div class="gift-card-top">
+
+                    <div class="bank-brand">
+
+                        <div class="bank-symbol bank-bca">
+                            BCA
+                        </div>
+
+                        <span>BANK CENTRAL ASIA</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-wifi bank-contactless"></i>
+
+                </div>
+
+
+                <div class="gift-chip">
+                    <i class="fa-solid fa-sim-card"></i>
+                </div>
+
+
+                <div class="account-number">
+                    1234567890
+                </div>
+
+
+                <div class="gift-card-bottom">
+
+                    <div class="account-owner">
+
+                        <span>NAMA PEMILIK REKENING</span>
+
+                        <h3>Mohran Qiyats</h3>
+
+                    </div>
+
+                    <button
+                        class="copy-account"
+                        type="button"
+                        data-copy="1234567890">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                        <span>Salin Nomor</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- REKENING 2 -->
+
+            <div class="gift-card">
+
+                <div class="gift-card-top">
+
+                    <div class="bank-brand">
+
+                        <div class="bank-symbol bank-mandiri">
+                            M
+                        </div>
+
+                        <span>BANK MANDIRI</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-wifi bank-contactless"></i>
+
+                </div>
+
+
+                <div class="gift-chip">
+                    <i class="fa-solid fa-sim-card"></i>
+                </div>
+
+
+                <div class="account-number">
+                    0000000
+                </div>
+
+
+                <div class="gift-card-bottom">
+
+                    <div class="account-owner">
+
+                        <span>NAMA PEMILIK REKENING</span>
+
+                        <h3>Alfira Oktaviani Datukramat</h3>
+
+                    </div>
+
+                    <button
+                        class="copy-account"
+                        type="button"
+                        data-copy="0987654321">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                        <span>Salin Nomor</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- UCAPAN -->
+
+        <div class="gift-thanks">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     RSVP / UCAPAN DAN KONFIRMASI KEHADIRAN
+========================================== -->
+
+<section class="rsvp-section" id="rsvp">
+
+    <div class="rsvp-container">
+
+        <div class="rsvp-card">
+
+            <!-- JUDUL -->
+
+            <div class="rsvp-heading">
+
+                <h2>Ucapkan Sesuatu</h2>
+
+                <p>Berikan Ucapan & Doa Restu</p>
+
+            </div>
+
+
+            <!-- FORM RSVP -->
+
+            <form id="rsvpForm">
+
+                <!-- NAMA TAMU -->
+
+                <div class="rsvp-field">
+
+                    <input
+                        type="text"
+                        id="rsvpName"
+                        placeholder="Nama Kamu"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+
+                <!-- UCAPAN -->
+
+                <div class="rsvp-field">
+
+                    <textarea
+                        id="rsvpMessage"
+                        placeholder="Berikan Ucapan & Do'a"
+                    ></textarea>
+
+                    <small class="rsvp-error" id="messageError">
+                        Silakan tuliskan ucapan dan doa restu.
+                    </small>
+
+                </div>
+
+
+                <!-- KONFIRMASI KEHADIRAN -->
+
+                <div class="attendance-section">
+
+                    <p class="attendance-title">
+                        Konfirmasi Kehadiran ?
+                    </p>
+
+
+                    <div class="attendance-options">
+
+                        <label class="attendance-option hadir">
+
+                            <input
+                                type="radio"
+                                name="attendance"
+                                value="Hadir"
+                            >
+
+                            <span class="attendance-content">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Hadir
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="attendance-option tidak-hadir">
+
+                            <input
+                                type="radio"
+                                name="attendance"
+                                value="Tidak Hadir"
+                            >
+
+                            <span class="attendance-content">
+
+                                <i class="fa-solid fa-circle-xmark"></i>
+
+                                Tidak Hadir
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <small class="rsvp-error" id="attendanceError">
+                        Silakan pilih konfirmasi kehadiran.
+                    </small>
+
+                </div>
+
+
+                <!-- TOMBOL KIRIM -->
+
+                <button type="submit" class="rsvp-submit">
+
+                    <span>Kirim</span>
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- PESAN BERHASIL -->
+
+            <div class="rsvp-success" id="rsvpSuccess">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>Terima Kasih!</h3>
+
+                <p>
+                    Ucapan dan konfirmasi kehadiran Anda
+                    sangat berarti bagi kami.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     WEDDING CLOSING
+========================================== -->
+
+<section class="closing-section" id="closing">
+
+    <div class="closing-container">
+
+        <!-- FOTO PASANGAN -->
+
+        <div class="closing-photo">
+
+            <img
+                src="images/5.jpg"
+                alt="Qiyats & Alfira"
+            >
+
+        </div>
+
+
+        <!-- UCAPAN TERIMA KASIH -->
+
+        <div class="closing-message">
+
+            <p>
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami,
+                apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                memberikan doa restu. Atas kehadiran dan doa restunya,
+                kami mengucapkan terima kasih.
+            </p>
+
+        </div>
+
+
+        <!-- SALAM PENUTUP -->
+
+        <div class="closing-greeting">
+
+            <p>Wassalamu’alaikum Wr. Wb.</p>
+
+        </div>
+
+
+        <!-- NAMA MEMPELAI -->
+
+        <div class="closing-names">
+
+            <h2>Qiyats <span>&</span> Alfira</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SIMPLE WEDDING FOOTER
+========================================== -->
+
+<footer class="simple-footer">
+
+    <p class="footer-credit">
+        Made with <i class="fa-solid fa-heart"></i> by a13project
+    </p>
+
+    <div class="footer-social">
+
+        <a href="https://wa.me/6285382920804"
+           target="_blank"
+           aria-label="WhatsApp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+        <a href="https://instagram.com/"
+           target="_blank"
+           aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
